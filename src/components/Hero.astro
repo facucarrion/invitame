@@ -1,0 +1,37 @@
+---
+import ArrowDown from './icons/ArrowDown.astro'
+
+const { background } = Astro.props
+---
+
+<section class='relative flex h-screen flex-col items-center justify-center'>
+  <ArrowDown
+    class='absolute bottom-12 size-16 stroke-primary lg:bottom-20'
+    id='arrow-icon'
+  />
+</section>
+
+<style define:vars={{ background: `url(${background})` }}>
+  #arrow-icon {
+    animation: bounce 2s infinite;
+  }
+
+  section {
+    background-image: var(--background);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

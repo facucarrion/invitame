@@ -1,0 +1,63 @@
+---
+import MusicPause from './icons/MusicPause.astro'
+import MusicPlay from './icons/MusicPlay.astro'
+
+interface Props {
+  src: string
+}
+
+const { src } = Astro.props
+---
+
+<button
+  class='fixed right-4 top-4 z-10 size-14 rounded-full bg-primary/70 text-white backdrop-blur-xl'
+  id='music-button'
+>
+  <MusicPlay
+    class='h-full w-full stroke-white'
+    id='music-play'
+  />
+  <MusicPause
+    class='h-full w-full stroke-white'
+    id='music-pause'
+    hidden
+  />
+</button>
+<audio
+  controls
+  id='music'
+  class='hidden'
+>
+  <source
+    src={src}
+    type='audio/mpeg'
+  />
+
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const button = document.getElementById('music-button') as HTMLButtonElement
+  const music = document.getElementById('music') as HTMLAudioElement
+  const musicPlay = document.getElementById('music-play') as HTMLElement
+  const musicPause = document.getElementById('music-pause') as HTMLElement
+
+  let isMusicPlaying = false
+
+  button.addEventListener('click', () => {
+    isMusicPlaying = !isMusicPlaying
+    music.volume = 0.5
+    console.log(musicPlay)
+
+    if (isMusicPlaying) {
+      musicPlay.style.display = 'none'
+      musicPause.style.display = 'block'
+
+      music.play()
+    } else {
+      musicPlay.style.display = 'block'
+      musicPause.style.display = 'none'
+      music.pause()
+    }
+  })
+</script>

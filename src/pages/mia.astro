@@ -1,0 +1,286 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Instagram from '../components/Instagram.astro'
+import Thanks from '../components/Thanks.astro'
+import Footer from '../components/Footer.astro'
+import ArrowDown from '../components/icons/ArrowDown.astro'
+import WhatsApp from '../components/icons/WhatsApp.astro'
+---
+
+<Layout>
+  <section
+    class='relative flex h-screen flex-col items-center justify-center'
+    id='hero'
+  >
+    <ArrowDown
+      class='absolute bottom-12 size-16 stroke-primary lg:bottom-20'
+      id='arrow-icon'
+    />
+  </section>
+
+  <section
+    class='flex items-center justify-center py-6 text-lg text-white bg-primary'
+  >
+    <div class='flex w-[500px] flex-col items-center p-4'>
+      <p>Faltan:</p>
+      <div
+        class='text-xl font-semibold tracking-wide sm:text-2xl'
+        id='countdown'
+      >
+      </div>
+    </div>
+  </section>
+
+  <section
+    class='flex flex-col relative items-center gap-8 py-16 font-mallorga'
+  >
+    <h3 class='w-full max-w-[650px] text-center text-3xl mb-6'>
+      Quiero que seas parte de este momento tan importante para mi!
+    </h3>
+
+    <img src='/icons/calendar.gif' class='h-36' />
+
+    <div class='flex flex-col items-center gap-2 mb-6'>
+      <p class='text-4xl font-regular'>Sábado 22 de Marzo</p>
+      <strong class='text-4xl font-normal'>| 22:00 hs. |</strong>
+    </div>
+
+    <img src='/icons/map.gif' class='h-32' />
+
+    <h3 class='w-full max-w-[650px] text-center text-4xl'>Salón Elegantes</h3>
+
+    <a
+      href='https://maps.app.goo.gl/k6mukjb5fBuu9vNdA'
+      class='rounded-full bg-[#dcaf66] px-8 py-2 text-xl text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+    >
+      CÓMO LLEGAR
+    </a>
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute bottom-0 left-0 h-4/5 -z-10'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute top-0 right-0 h-4/5 -z-10'
+    />
+
+    <img src='/mariposa-blanca.webp' class='absolute bottom-10 left-10 h-48' />
+  </section>
+
+  <section
+    class='relative flex flex-col items-center gap-16 py-16 bg-[#f7f1df]'
+  >
+    <div class='flex flex-col items-center gap-6'>
+      <img src='/icons/email.webp' class='h-36' />
+
+      <h2
+        class='text-center text-4xl font-semibold tracking-wider text-primary'
+      >
+        CONFIRMACIÓN DE ASISTENCIA
+      </h2>
+
+      <p class='text-center text-2xl font-light'>
+        Confirmá tu asistencia a través de WhatsApp.
+      </p>
+
+      <span class='flex gap-2 md:gap-4'>
+        <a
+          href='https://wa.me/+5493571693294'
+          class='flex items-center gap-2 rounded-full bg-primary px-8 py-2 text-lg text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+          target='_blank'
+        >
+          <WhatsApp class='size-6 stroke-white md:size-8' />
+          MIA
+        </a>
+        <a
+          href='https://wa.me/+5493571698886'
+          class='flex items-center gap-2 rounded-full bg-primary px-8 py-2 text-lg text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+          target='_blank'
+        >
+          <WhatsApp class='size-6 stroke-white md:size-8' />
+          ROMINA
+        </a>
+      </span>
+    </div>
+
+    <div class='flex flex-col items-center'>
+      <strong class='font-semibold text-xl'>Valor de la Tarjeta</strong>
+      <p class='text-xl'>Mayores: $40.000</p>
+      <p class='text-xl'>Menores (4-12 años): $25.000</p>
+      <p class='text-xl'>Adolescentes (13-18 años): $15.000</p>
+    </div>
+
+    <img
+      src='/mariposa-marron.webp'
+      class='scale-x-[-1] absolute h-56 left-0 bottom-5'
+    />
+  </section>
+
+  <section
+    class='relative flex flex-col items-center gap-4 py-16 overflow-hidden'
+  >
+    <img src='/icons/dress.gif' class='h-32' />
+
+    <h3 class='w-full text-center text-6xl mb-6 font-adelia'>Dress Code</h3>
+
+    <span class='flex flex-col items-center gap2 text-2xl'>
+      <p>Elegante</p>
+      <p>No ir de plateado, dorado, ni blanco.</p>
+    </span>
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute w-2/5 -z-10 right-0 bottom-0 scale-x-[-1]'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute h-full left-0 top-0 scale-x-[-1]'
+    />
+
+    <img
+      src='/mariposa-blanca.webp'
+      class='absolute right-5 bottom-5 h-40 scale-x-[-1]'
+    />
+  </section>
+
+  <section
+    class='relative py-12 flex flex-col items-center justify-center bg-[#f7f1df]'
+  >
+    <div
+      class='row-auto grid w-full grid-cols-2 gap-6 md:max-w-[1200px] md:grid-cols-4 md:grid-rows-2'
+    >
+      <img src='/gallery/1.webp' />
+      <img src='/gallery/2.webp' />
+      <img src='/gallery/3.webp' />
+      <img src='/gallery/4.webp' />
+      <img src='/gallery/5.webp' />
+      <img src='/gallery/6.webp' />
+      <img src='/gallery/7.webp' />
+      <img src='/gallery/8.webp' />
+    </div>
+  </section>
+
+  <section
+    class='relative pb-12 flex flex-col items-center justify-center bg-[#f7f1df]'
+  >
+    <img src='/icons/present.gif' class='h-32' />
+
+    <h3 class='w-full text-center text-6xl mb-12 font-adelia'>Regalos</h3>
+
+    <span
+      class='flex flex-col items-center gap2 text-2xl w-full max-w-[550px] text-center text-pretty'
+    >
+      <p class='mb-2'>
+        Nada es más importante que tu presencia, pero si deseas hacerme un
+        presente puedes depositarlo en la siguiente cuenta:
+      </p>
+      <p class='font-semibold'>CVU: 0000007900275009070088</p>
+      <p class='font-semibold'>Alias: XV.MIA.QUINCE.UALA</p>
+    </span>
+
+    <img src='/grupo_mariposas.webp' class='absolute top-0 left-0 h-4/5' />
+    <img
+      src='/mariposa-marron-cortada.webp'
+      class='absolute bottom-0 right-0 h-4/5'
+    />
+  </section>
+
+  <section class='flex flex-col relative items-center gap-8 py-16'>
+    <img src='/icons/photo.gif' class='h-36' />
+
+    <h3 class='w-full text-center text-5xl mb-12 font-adelia'>
+      Quiero ver tus fotos!
+    </h3>
+
+    <span
+      class='flex flex-col items-center gap2 text-2xl w-full max-w-[550px] text-center text-pretty'
+    >
+      <p class='mb-2'>
+        Pueden usar mi # en todas sus publicaciones de instagram <strong
+          >#miaquincefest</strong
+        >
+      </p>
+    </span>
+
+    <h3 class='w-full text-center text-4xl mb-12 font-adelia mt-8'>
+      Te espero para pasar una noche inolvidable!
+    </h3>
+
+    <img src='/logo.webp' class='h-56' />
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute bottom-0 right-0 h-4/5 -z-10 scale-x-[-1]'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute top-0 left-0 h-4/5 -z-10 scale-x-[-1]'
+    />
+
+    <img src='/mariposa-blanca.webp' class='absolute bottom-10 left-10 h-48' />
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  #arrow-icon {
+    animation: bounce 2s infinite;
+  }
+
+  #left {
+    transform: scaleX(-1);
+  }
+
+  #hero {
+    background-image: url('/background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const countdown = document.getElementById('countdown') as HTMLDivElement
+  const goalDate = new Date('2025-03-22T22:00:00').getTime()
+
+  function updateCountdown() {
+    const actualDate = new Date().getTime()
+    const difference = goalDate - actualDate
+
+    const data = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      ),
+      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((difference % (1000 * 60)) / 1000)
+    }
+
+    if (difference >= 0) {
+      const dateText = `${data.days} Días, ${data.hours}hs, ${data.minutes}m, ${data.seconds}s`
+      countdown.innerHTML = dateText
+      requestAnimationFrame(updateCountdown)
+    } else {
+      countdown.innerHTML = '¡Es el día!'
+    }
+  }
+
+  updateCountdown()
+</script>

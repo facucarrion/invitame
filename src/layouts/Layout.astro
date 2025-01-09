@@ -1,0 +1,49 @@
+---
+import '@fontsource-variable/montserrat'
+import Music from '../components/Music.astro'
+---
+
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Sofi - Quince Años</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='shortcut icon' href='/butterfly.webp' type='image/webp' />
+  </head>
+  <body class='select-none bg-tertiary *:px-4'>
+    <Music src='/music/music.mp3' />
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: 'Yustine Signature';
+    src: url('/fonts/Yustine Signature.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Mallorga';
+    src: url('/fonts/Mallorga Regular.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Adelia';
+    src: url('/fonts/adelia.ttf') format('truetype');
+  }
+
+  :root {
+    font-size: 16px;
+  }
+
+  html {
+    font-family: 'Montserrat Variable', sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
