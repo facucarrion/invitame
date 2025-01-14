@@ -34,54 +34,59 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
   <section
     class='flex flex-col relative items-center gap-8 py-16 font-mallorga'
   >
-    <h3 class='w-full max-w-[650px] text-center text-3xl mb-6'>
+    <h3 class='w-full max-w-[650px] text-center text-2xl md:text-3xl mb-6'>
       Quiero que seas parte de este momento tan importante para mi!
     </h3>
 
-    <img src='/icons/calendar.gif' class='h-36' />
+    <img src='/icons/calendar.gif' class='h-28 md:h-32' />
 
     <div class='flex flex-col items-center gap-2 mb-6'>
-      <p class='text-4xl font-regular'>Sábado 22 de Marzo</p>
-      <strong class='text-4xl font-normal'>| 22:00 hs. |</strong>
+      <p class='text-3xl md:text-4xl font-regular'>Sábado 22 de Marzo</p>
+      <strong class='text-3xl md:text-4xl font-normal'>| 22:00 hs. |</strong>
     </div>
 
-    <img src='/icons/map.gif' class='h-32' />
+    <img src='/icons/map.gif' class='h-28 md:h-32' />
 
-    <h3 class='w-full max-w-[650px] text-center text-4xl'>Salón Elegantes</h3>
+    <h3 class='w-full max-w-[650px] text-center text-3xl md:text-4xl'>
+      Salón Elegantes
+    </h3>
 
     <a
       href='https://maps.app.goo.gl/k6mukjb5fBuu9vNdA'
-      class='rounded-full bg-[#dcaf66] px-8 py-2 text-xl text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+      class='rounded-full bg-[#dcaf66] font-sans px-8 py-2 text-xl text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
     >
       CÓMO LLEGAR
     </a>
 
     <img
       src='/imagen-izquierda.webp'
-      class='absolute bottom-0 left-0 h-4/5 -z-10'
+      class='absolute bottom-0 left-0 h-2/5 md:h-4/5 -z-10'
     />
 
     <img
       src='/imagen-derecha.webp'
-      class='absolute top-0 right-0 h-4/5 -z-10'
+      class='absolute top-0 right-0 h-2/5 md:h-4/5 -z-10'
     />
 
-    <img src='/mariposa-blanca.webp' class='absolute bottom-10 left-10 h-48' />
+    <img
+      src='/mariposa-blanca.webp'
+      class='absolute bottom-2 left-2 h-28 md:h-48'
+    />
   </section>
 
   <section
     class='relative flex flex-col items-center gap-16 py-16 bg-[#f7f1df]'
   >
     <div class='flex flex-col items-center gap-6'>
-      <img src='/icons/email.webp' class='h-36' />
+      <img src='/icons/email.webp' class='h-28 md:h-36' />
 
       <h2
-        class='text-center text-4xl font-semibold tracking-wider text-primary'
+        class='text-center text-3xl md:text-4xl font-semibold tracking-wider text-primary'
       >
         CONFIRMACIÓN DE ASISTENCIA
       </h2>
 
-      <p class='text-center text-2xl font-light'>
+      <p class='text-center text-xl md:text-2xl font-light'>
         Confirmá tu asistencia a través de WhatsApp.
       </p>
 
@@ -114,20 +119,22 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
 
     <img
       src='/mariposa-marron.webp'
-      class='scale-x-[-1] absolute h-56 left-0 bottom-5'
+      class='scale-x-[-1] absolute h-32 md:h-56 hidden md:block left-5 bottom-5'
     />
   </section>
 
   <section
     class='relative flex flex-col items-center gap-4 py-16 overflow-hidden'
   >
-    <img src='/icons/dress.gif' class='h-32' />
+    <img src='/icons/dress.gif' class='h-28 md:h-32' />
 
-    <h3 class='w-full text-center text-6xl mb-6 font-adelia'>Dress Code</h3>
+    <h3 class='w-full text-center text-4xl md:text-6xl mb-6 font-adelia'>
+      Dress Code
+    </h3>
 
-    <span class='flex flex-col items-center gap2 text-2xl'>
+    <span class='flex flex-col items-center gap2 text-xl md:text-2xl'>
       <p>Elegante</p>
-      <p>No ir de plateado, dorado, ni blanco.</p>
+      <p>No ir de plateado ni dorado.</p>
     </span>
 
     <img
@@ -137,12 +144,12 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
 
     <img
       src='/imagen-derecha.webp'
-      class='absolute h-full left-0 top-0 scale-x-[-1]'
+      class='absolute h-full -z-10 left-0 top-0 scale-x-[-1]'
     />
 
     <img
       src='/mariposa-blanca.webp'
-      class='absolute right-5 bottom-5 h-40 scale-x-[-1]'
+      class='absolute right-5 bottom-5 h-40 scale-x-[-1] hidden md:block'
     />
   </section>
 
@@ -166,12 +173,14 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
   <section
     class='relative pb-12 flex flex-col items-center justify-center bg-[#f7f1df]'
   >
-    <img src='/icons/present.gif' class='h-32' />
+    <img src='/icons/present.gif' class='h-28 md:h-32' />
 
-    <h3 class='w-full text-center text-6xl mb-12 font-adelia'>Regalos</h3>
+    <h3 class='w-full text-center text-4xl md:text-6xl mb-12 font-adelia'>
+      Regalos
+    </h3>
 
     <span
-      class='flex flex-col items-center gap2 text-2xl w-full max-w-[550px] text-center text-pretty'
+      class='flex flex-col items-center gap2 text-xl md:text-2xl w-full max-w-[550px] text-center text-pretty'
     >
       <p class='mb-2'>
         Nada es más importante que tu presencia, pero si deseas hacerme un
@@ -181,47 +190,53 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
       <p class='font-semibold'>Alias: XV.MIA.QUINCE.UALA</p>
     </span>
 
-    <img src='/grupo_mariposas.webp' class='absolute top-0 left-0 h-4/5' />
+    <img
+      src='/grupo_mariposas.webp'
+      class='absolute top-0 left-0 h-4/5 hidden md:block'
+    />
     <img
       src='/mariposa-marron-cortada.webp'
-      class='absolute bottom-0 right-0 h-4/5'
+      class='absolute bottom-0 right-0 h-4/5 hidden md:block'
     />
   </section>
 
   <section class='flex flex-col relative items-center gap-8 py-16'>
-    <img src='/icons/photo.gif' class='h-36' />
+    <img src='/icons/photo.gif' class='h-28 md:h-36' />
 
-    <h3 class='w-full text-center text-5xl mb-12 font-adelia'>
+    <h3 class='w-full text-center text-3xl md:text-5xl mb-12 font-adelia'>
       Quiero ver tus fotos!
     </h3>
 
     <span
-      class='flex flex-col items-center gap2 text-2xl w-full max-w-[550px] text-center text-pretty'
+      class='flex flex-col items-center gap2 text-xl md:text-2xl w-full max-w-[550px] text-center text-pretty'
     >
       <p class='mb-2'>
         Pueden usar mi # en todas sus publicaciones de instagram <strong
           >#miaquincefest</strong
-        >
+        >.
       </p>
     </span>
 
-    <h3 class='w-full text-center text-4xl mb-12 font-adelia mt-8'>
+    <h3 class='w-full text-center text-3xl md:text-4xl mb-12 font-adelia mt-8'>
       Te espero para pasar una noche inolvidable!
     </h3>
 
-    <img src='/logo.webp' class='h-56' />
+    <img src='/logo.webp' class='h-40 md:h-56' />
 
     <img
       src='/imagen-izquierda.webp'
-      class='absolute bottom-0 right-0 h-4/5 -z-10 scale-x-[-1]'
+      class='absolute bottom-0 right-0 h-2/5 md:h-4/5 -z-10 scale-x-[-1]'
     />
 
     <img
       src='/imagen-derecha.webp'
-      class='absolute top-0 left-0 h-4/5 -z-10 scale-x-[-1]'
+      class='absolute top-0 left-0 h-2/5 md:h-4/5 -z-10 scale-x-[-1]'
     />
 
-    <img src='/mariposa-blanca.webp' class='absolute bottom-10 left-10 h-48' />
+    <img
+      src='/mariposa-blanca.webp'
+      class='absolute hidden md:block bottom-10 left-10 h-48'
+    />
   </section>
 
   <Footer />

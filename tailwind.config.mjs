@@ -8,7 +8,8 @@ export default {
       },
       fontFamily: {
         mallorga: ['Mallorga', 'sans-serif'],
-        adelia: ['Adelia', 'sans-serif']
+        adelia: ['Adelia', 'sans-serif'],
+        sans: ['Montserrat Variable', 'sans-serif']
       }
     }
   },
