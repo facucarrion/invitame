@@ -42,13 +42,21 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
 
     <div class='flex flex-col items-center gap-2 mb-6'>
       <p class='text-3xl md:text-4xl font-regular'>Sábado 22 de Marzo</p>
-      <strong class='text-3xl md:text-4xl font-normal'>| 22:00 hs. |</strong>
+      <strong class='text-3xl md:text-4xl font-normal'>| 21:00 hs. |</strong>
+
+      <p class='text-xl md:text-2xl text-center text-pretty'>
+        Por favor ser puntuales.
+      </p>
     </div>
 
     <img src='/icons/map.gif' class='h-24 md:h-32' />
 
     <h3 class='w-full max-w-[650px] text-center text-3xl md:text-4xl'>
       Salón Elegantes
+
+      <p class='text-xl md:text-2xl text-center text-pretty'>
+        Pres. Juan D. Perón 542, Río Tercero
+      </p>
     </h3>
 
     <a
@@ -78,7 +86,7 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
     class='relative flex flex-col items-center gap-16 py-16 bg-[#f7f1df]'
   >
     <div class='flex flex-col items-center gap-6'>
-      <img src='/icons/email.webp' class='h-28 md:h-36' />
+      <img src='/icons/email.gif' class='h-28 md:h-36' />
 
       <h2
         class='text-center text-3xl md:text-4xl font-semibold tracking-wider text-primary'
@@ -242,7 +250,9 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
         compartas las fotos y me ayudes a inmortalizar estos momentos.
       </p>
 
-      <strong class='text-3xl'>@misxvmia</strong>
+      <a href='https://instagram.com/misxvmia'
+        ><strong class='text-3xl'>@misxvmia</strong></a
+      >
     </span>
 
     <h3
@@ -303,7 +313,7 @@ import WhatsApp from '../components/icons/WhatsApp.astro'
 
 <script>
   const countdown = document.getElementById('countdown') as HTMLDivElement
-  const goalDate = new Date('2025-03-22T22:00:00').getTime()
+  const goalDate = new Date('2025-03-22T21:00:00').getTime()
 
   function updateCountdown() {
     const actualDate = new Date().getTime()
