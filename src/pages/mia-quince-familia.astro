@@ -1,0 +1,333 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/Footer.astro'
+import ArrowDown from '../components/icons/ArrowDown.astro'
+---
+
+<Layout>
+  <section
+    class='relative flex h-screen flex-col items-center justify-center bg-[#f7f1df] bg-cover sm:bg-contain'
+    id='hero'
+  >
+    <ArrowDown
+      class='absolute bottom-12 size-16 stroke-primary lg:bottom-20'
+      id='arrow-icon'
+    />
+  </section>
+
+  <section
+    class='flex items-center justify-center py-6 text-lg text-white bg-primary'
+  >
+    <div class='flex w-[500px] flex-col items-center p-4'>
+      <p>Faltan:</p>
+      <div
+        class='text-xl font-semibold tracking-wide sm:text-2xl'
+        id='countdown'
+      >
+      </div>
+    </div>
+  </section>
+
+  <section
+    class='flex flex-col relative items-center gap-8 py-16 font-mallorga'
+  >
+    <h3 class='w-full max-w-[650px] text-center text-2xl md:text-3xl mb-6'>
+      Hay momentos inolvidables que se atesoran en el corazón para siempre. Por
+      esa razón, quiero que compartas este día tan especial: Mis 15 años.
+    </h3>
+
+    <img src='/icons/calendar.gif' class='h-28 md:h-32' />
+
+    <div class='flex flex-col items-center gap-2 mb-6'>
+      <p class='text-3xl md:text-4xl font-regular'>Sábado 22 de Marzo</p>
+      <strong class='text-3xl md:text-4xl font-normal'>| 21:00 hs. |</strong>
+
+      <p class='text-xl md:text-2xl text-center text-pretty'>
+        Cada minuto cuenta en esta noche especial. Te esperamos puntual para
+        vivir esta fiesta de principio a fin.
+      </p>
+    </div>
+
+    <img src='/icons/map.gif' class='h-24 md:h-32' />
+
+    <h3 class='w-full max-w-[650px] text-center text-3xl md:text-4xl'>
+      Salón Elegantes
+
+      <p class='text-xl md:text-2xl text-center text-pretty'>
+        Pres. Juan D. Perón 542, Río Tercero
+      </p>
+    </h3>
+
+    <a
+      href='https://maps.app.goo.gl/k6mukjb5fBuu9vNdA'
+      class='rounded-full bg-[#dcaf66] font-sans px-8 py-2 text-xl text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+    >
+      CÓMO LLEGAR
+    </a>
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute bottom-0 left-0 h-full md:h-4/5 -z-10'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute top-0 right-0 h-full md:h-4/5 -z-10'
+    />
+
+    <img
+      src='/mariposa-blanca.webp'
+      class='absolute bottom-2 left-2 h-28 md:h-48'
+    />
+  </section>
+
+  <section
+    class='relative flex flex-col items-center gap-16 py-16 bg-[#f7f1df]'
+  >
+    <div class='flex flex-col items-center gap-2'>
+      <img src='/icons/email.gif' class='h-28 md:h-36' />
+
+      <h2
+        class='text-center text-3xl md:text-4xl font-semibold tracking-wider text-primary'
+      >
+        CONFIRMACIÓN DE ASISTENCIA
+      </h2>
+
+      <p class='text-center text-xl md:text-2xl font-light'>
+        Confirmá tu asistencia antes del
+        <strong class='font-semibold'>10/03</strong> haciendo click aquí.
+      </p>
+
+      <span class='flex gap-2 md:gap-4'>
+        <a
+          href='https://docs.google.com/forms/d/e/1FAIpQLScs3H2hPeas0hIvXFDA3UDadBJ-P4ZcddzoAyCYrgvNXdh9Rw/viewform?usp=header'
+          class='flex items-center gap-2 rounded-full bg-primary px-8 py-2 text-lg text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+          target='_blank'
+        >
+          FORMULARIO
+        </a>
+      </span>
+    </div>
+
+    <p class='text-center text-xl md:text-2xl font-light max-w-[600px]'>
+        Queremos que disfrutes al máximo este momento especial, por eso, esta celebración es un obsequio de nuestra parte para ti.
+      </p>
+
+    <img
+      src='/mariposa-marron.webp'
+      class='scale-x-[-1] absolute h-32 md:h-56 hidden md:block left-5 bottom-5'
+    />
+  </section>
+
+  <section
+    class='relative flex flex-col items-center gap-4 py-16 overflow-hidden'
+  >
+    <img src='/icons/dress.gif' class='h-28 md:h-32' />
+
+    <h3 class='w-full text-center text-4xl md:text-6xl mb-6 font-adelia'>
+      Dress Code
+    </h3>
+
+    <span class='flex flex-col items-center gap2 text-xl md:text-2xl'>
+      <p>Elegante.</p>
+      <p class='text-center'>
+        El color plateado y dorado está reservado para la protagonista de la
+        noche.
+      </p>
+    </span>
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute w-full -z-10 right-0 bottom-0 scale-x-[-1]'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute w-full -z-10 left-0 top-0 scale-x-[-1]'
+    />
+
+    <img src='/mariposa-blanca.webp' class='absolute top-5 left-5 h-32 z-10' />
+  </section>
+
+  <section
+    class='relative py-12 flex flex-col items-center justify-center bg-[#f7f1df]'
+  >
+    <div
+      class='grid w-full gap-6 md:max-w-[1200px] md:grid-cols-2 md:auto-rows-[minmax(200px,_auto)]'
+    >
+      <div class='grid grid-cols-2 gap-6'>
+        <img src='/gallery/1.webp' class='w-full h-full object-cover' />
+        <img src='/gallery/2.webp' class='w-full h-full object-cover' />
+      </div>
+      <img
+        src='/gallery/3.webp'
+        class='w-full h-full object-cover md:col-span-2'
+      />
+      <div class='grid grid-cols-2 gap-6'>
+        <img src='/gallery/4.webp' class='w-full h-full object-cover' />
+        <img src='/gallery/5.webp' class='w-full h-full object-cover' />
+      </div>
+      <img
+        src='/gallery/6.webp'
+        class='w-full h-full object-cover md:col-span-2'
+      />
+      <div class='grid grid-cols-2 gap-6'>
+        <img src='/gallery/7.webp' class='w-full h-full object-cover' />
+        <img src='/gallery/8.webp' class='w-full h-full object-cover' />
+      </div>
+    </div>
+  </section>
+
+  <section
+    class='relative pb-12 flex flex-col items-center justify-center bg-[#f7f1df]'
+  >
+    <img src='/icons/present.gif' class='h-28 md:h-32' />
+
+    <h3 class='w-full text-center text-4xl md:text-6xl mb-12 font-adelia'>
+      Regalos
+    </h3>
+
+    <span
+      class='flex flex-col items-center gap2 text-xl md:text-2xl w-full max-w-[550px] text-center text-pretty'
+    >
+      <p class='mb-2'>
+        Nada es más importante que tu presencia, pero si deseas hacerme un
+        presente puedes depositarlo en la siguiente cuenta:
+      </p>
+      <p class='font-semibold'>CVU: 0000007900275009070088</p>
+      <p class='font-semibold'>Alias: XV.MIA.QUINCE.UALA</p>
+    </span>
+
+    <img
+      src='/grupo_mariposas.webp'
+      class='absolute top-0 left-0 h-4/5 hidden md:block'
+    />
+    <img src='/mariposa-marron.webp' class='absolute top-0 left-0 h-32' />
+  </section>
+
+  <section
+    class='relative pb-12 flex flex-col items-center justify-center bg-[#f7f1df]'
+  >
+    <img src='/icons/festival.gif' class='h-28 md:h-32' />
+
+    <h3 class='w-full text-center text-4xl md:text-6xl mb-12 font-adelia'>
+      Música
+    </h3>
+
+    <a
+      href='https://wa.me/+5493571356409?text=Hola%20M%C3%ADa!%20La%20noche%20de%20tu%20fiesta,%20me%20encantar%C3%ADa%20escuchar%20la%20canci%C3%B3n...%0A'
+      class='flex items-center gap-2 rounded-full bg-primary px-8 py-2 text-lg text-white transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+      target='_blank'
+    >
+      ¿Qué Canción no Debe Faltar?
+    </a>
+
+    <img
+      src='/grupo_mariposas.webp'
+      class='absolute top-0 left-0 h-4/5 hidden md:block'
+    />
+    <img
+      src='/mariposa-marron-cortada.webp'
+      class='absolute bottom-0 right-0 h-4/5 hidden md:block'
+    />
+  </section>
+
+  <section class='flex flex-col relative items-center gap-8 py-16'>
+    <img src='/icons/photo.gif' class='h-28 md:h-36' />
+
+    <h3 class='w-full text-center text-3xl md:text-5xl mb-12 font-adelia'>
+      Quiero ver tus fotos!
+    </h3>
+
+    <span
+      class='flex flex-col items-center gap-4 text-xl md:text-2xl w-full max-w-[550px] text-center text-pretty'
+    >
+      <p class='mb-2'>
+        Como no quiero perderme ningún detalle de esta noche, te invito a que
+        compartas las fotos y me ayudes a inmortalizar estos momentos.
+      </p>
+
+      <strong class='text-3xl'>#misxvmia</strong>
+      <strong class='text-3xl'>@miamartin_1</strong>
+    </span>
+
+    <h3
+      class='w-full text-center text-3xl md:text-4xl mb-12 font-adelia mt-8 leading-relaxed'
+    >
+      Te espero para pasar una noche inolvidable!
+    </h3>
+
+    <img src='/logo.webp' class='h-40 md:h-56' />
+
+    <img
+      src='/imagen-izquierda.webp'
+      class='absolute bottom-0 right-0 h-full md:h-4/5 -z-10 scale-x-[-1]'
+    />
+
+    <img
+      src='/imagen-derecha.webp'
+      class='absolute top-0 left-0 h-full md:h-4/5 -z-10 scale-x-[-1]'
+    />
+
+    <img src='/mariposa-blanca.webp' class='absolute top-5 left-5 h-32' />
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  #arrow-icon {
+    animation: bounce 2s infinite;
+  }
+
+  #left {
+    transform: scaleX(-1);
+  }
+
+  #hero {
+    background-image: url('/background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const countdown = document.getElementById('countdown') as HTMLDivElement
+  const goalDate = new Date('2025-03-22T21:00:00').getTime()
+
+  function updateCountdown() {
+    const actualDate = new Date().getTime()
+    const difference = goalDate - actualDate
+
+    const data = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      ),
+      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((difference % (1000 * 60)) / 1000)
+    }
+
+    if (difference >= 0) {
+      const dateText = `${data.days} Días, ${data.hours}hs, ${data.minutes}m, ${data.seconds}s`
+      countdown.innerHTML = dateText
+      requestAnimationFrame(updateCountdown)
+    } else {
+      countdown.innerHTML = '¡Es el día!'
+    }
+  }
+
+  updateCountdown()
+</script>
