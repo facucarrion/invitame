@@ -32,15 +32,15 @@ import Instagram from '../components/icons/Instagram.astro'
   <section
     class='flex items-center justify-center gap-12 py-6 text-lg text-white bg-helena-font'
   >
-    <img src='/helena/botones_izq.webp' class='h-8' alt='' />
+    <img src='/helena/botones_izq.webp' class='h-6' alt='' />
     <button
-      class='size-14 p-4 rounded-full bg-helena-primary text-white backdrop-blur-xl hover:opacity-80 transition-opacity'
+      class='size-12 p-4 rounded-full bg-helena-primary text-white backdrop-blur-xl hover:opacity-80 transition-opacity'
       id='music-button'
     >
       <MusicPlay class='h-full w-full stroke-white' id='music-play' />
       <MusicPause class='h-full w-full stroke-white' id='music-pause' hidden />
     </button>
-    <img src='/helena/botones_der.webp' class='h-8' alt='' />
+    <img src='/helena/botones_der.webp' class='h-6' alt='' />
 
     <audio controls id='music' class='hidden'>
       <source src='/music/music.mp3' type='audio/mpeg' />
@@ -50,44 +50,45 @@ import Instagram from '../components/icons/Instagram.astro'
   </section>
 
   <section class='flex flex-col relative items-center gap-8 py-16 font-audrey'>
-    <p class='text-3xl text-center text-pretty'>
+    <p class='text-xl text-center text-pretty'>
       La vida es un camino lleno de luces...<br />
-      y mis 15 será una de las más brillantes <br />
+      y mis <strong class='text-lg'>15</strong> será una de las más brillantes <br
+      />
       ¡Vení a festejarlo conmigo!
     </p>
 
     <img
       src='/helena/decorations/manchas derecha.webp'
       alt=''
-      class='absolute bottom-0 right-0 -z-10 h-4/5'
+      class='absolute bottom-0 right-0 -z-10 h-56'
     />
 
     <img
       src='/helena/decorations/hojas.webp'
       alt=''
-      class='absolute bottom-0 right-0 -z-10 h-full'
+      class='absolute bottom-0 right-0 -z-10 h-36'
     />
 
     <img
       src='/helena/decorations/manchas izquierda.webp'
       alt=''
-      class='absolute top-0 left-0 -z-10 h-full'
+      class='absolute top-0 left-0 -z-10 h-56'
     />
 
     <img
       src='/helena/decorations/flores.webp'
       alt=''
-      class='absolute bottom-0 left-0 -z-10 h-1/2'
+      class='absolute bottom-0 left-0 -z-10 h-24'
     />
   </section>
 
   <section
-    class='flex items-center justify-center py-6 text-lg text-white bg-helena-font'
+    class='flex items-center justify-center py-6 text-lg text-helena-primary bg-helena-font'
   >
     <div class='flex w-[500px] flex-col items-center p-4'>
       <p>Faltan:</p>
       <div
-        class='text-xl font-semibold tracking-wide sm:text-2xl'
+        class='text-lg font-semibold tracking-wide sm:text-2xl'
         id='countdown'
       >
       </div>
@@ -97,16 +98,17 @@ import Instagram from '../components/icons/Instagram.astro'
   <section
     class='flex flex-col relative items-center gap-8 pt-16 pb-40 font-audrey bg-helena-background text-helena-primary [&>*]:z-20 [&>img]:z-10'
   >
-    <h3 class='w-full max-w-[650px] text-center text-3xl mb-6'>
+    <h3 class='w-full max-w-[650px] text-center text-2xl mb-6'>
       Cada minuto cuenta en esta noche especial. Te esperamos puntual para vivir
-      esta fiesta de principio a fin.
+      esta fiesta <br />
+      de principio a fin.
     </h3>
 
     <div class='flex flex-col items-center gap-2 mb-6'>
-      <p class='text-3xl md:text-4xl font-regular'>SÁBADO 05 DE JULIO</p>
-      <strong class='text-3xl md:text-4xl font-normal'>21:30 hs.</strong>
-      <p class='text-3xl md:text-4xl font-regular'>SALÓN 1929</p>
-      <p class='text-3xl font-regular'>(Uruguay 447. Río Tercero)</p>
+      <p class='text-2xl font-regular'>SÁBADO 05 DE JULIO</p>
+      <strong class='text-2xl font-normal'>21:30 hs.</strong>
+      <p class='text-2xl font-regular'>SALÓN 1929</p>
+      <p class='text-2xl font-regular'>(Uruguay 447. Río Tercero)</p>
     </div>
 
     <img src='/icons/map.gif' class='h-24 md:h-32' />
@@ -128,7 +130,7 @@ import Instagram from '../components/icons/Instagram.astro'
   <hr id='divisor' />
 
   <section
-    class='relative py-12 pb-40 flex flex-col items-center justify-center bg-helena-background'
+    class='relative py-12 pb-40 flex flex-col items-center justify-center bg-helena-background text-helena-primary'
   >
     <div
       class='grid w-full gap-6 max-w-[900px] grid-cols-2 xl:grid-cols-3
@@ -148,7 +150,7 @@ import Instagram from '../components/icons/Instagram.astro'
       Música
     </h3>
 
-    <p class='text-3xl text-center text-pretty font-audrey mb-8'>
+    <p class='text-2xl text-center text-pretty font-audrey mb-8'>
       La fiesta se arma con vos... <br />
       ¡y con tu música favorita! <br />
       Decime qué tema no puede <br />
@@ -175,7 +177,7 @@ import Instagram from '../components/icons/Instagram.astro'
   <section
     class='flex flex-col relative items-center py-24 bg-helena-background [&>img]:z-10 [&>*]:z-20'
   >
-    <p class='mb-12 text-3xl text-center text-pretty font-audrey'>
+    <p class='mb-12 text-2xl text-center text-pretty font-audrey'>
       Como no quiero perder ningún detalle <br />
       de esta fiesta, te invito a compartir <br />
       tus fotos y me ayudes a inmortalizar <br />
@@ -198,25 +200,25 @@ import Instagram from '../components/icons/Instagram.astro'
     <img
       src='/helena/decorations/manchas derecha.webp'
       alt=''
-      class='absolute bottom-0 right-0 -z-10 h-1/4'
+      class='absolute bottom-0 right-0 -z-10 h-56'
     />
 
     <img
       src='/helena/decorations/hojas.webp'
       alt=''
-      class='absolute bottom-0 right-0 -z-10 h-1/2'
+      class='absolute bottom-0 right-0 -z-10 h-36'
     />
 
     <img
       src='/helena/decorations/manchas izquierda.webp'
       alt=''
-      class='absolute top-0 left-0 -z-10 h-1/2'
+      class='absolute top-0 left-0 -z-10 h-56'
     />
 
     <img
       src='/helena/decorations/flores.webp'
       alt=''
-      class='absolute bottom-0 left-0 -z-10 h-1/4'
+      class='absolute bottom-0 left-0 -z-10 h-28'
     />
   </section>
 
@@ -232,16 +234,16 @@ import Instagram from '../components/icons/Instagram.astro'
     </h2>
 
     <p
-      class='text-center text-4xl text-helena-primary font-audrey text-pretty my-8'
+      class='text-center text-2xl text-helena-primary font-audrey text-pretty my-8'
     >
       Confirmá tu asistencia antes <br />
       del
-      <strong class='font-semibold'>10/03</strong> haciendo click aquí.
+      <strong class='font-semibold text-xl'>10/03</strong> haciendo click aquí.
     </p>
 
     <span class='flex gap-2 md:gap-4'>
       <a
-        href='https://docs.google.com/forms/d/e/1FAIpQLScs3H2hPeas0hIvXFDA3UDadBJ-P4ZcddzoAyCYrgvNXdh9Rw/viewform?usp=header'
+        href='https://forms.gle/9nzc8PHfpDoTfYd46'
         class='flex items-center gap-2 rounded-lg bg-helena-font px-8 py-2 text-lg text-helena-primary transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
         target='_blank'
       >
@@ -250,13 +252,13 @@ import Instagram from '../components/icons/Instagram.astro'
     </span>
 
     <p
-      class='text-center text-4xl text-helena-primary font-audrey text-pretty my-8'
+      class='text-center text-2xl text-helena-primary font-audrey text-pretty my-8'
     >
       Tu presencia va a hacer que la noche sea aún más linda!!
     </p>
 
     <h2
-      class='text-center text-6xl ml-24 font-bacalisties tracking-wider text-helena-primary'
+      class='text-center text-5xl ml-24 font-bacalisties tracking-wider text-helena-primary'
     >
       Te espero!
     </h2>
