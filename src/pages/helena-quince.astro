@@ -7,7 +7,18 @@ import MusicPause from '../components/icons/MusicPause.astro'
 import Instagram from '../components/icons/Instagram.astro'
 ---
 
-<Layout music={false}>
+<Layout
+  music={false}
+  title='Helena - Quince Años'
+  og={{
+    title: 'Helena - Quince Años',
+    image: 'https://invita-me.vercel.app/helena/icon.webp',
+    type: 'website',
+    url: 'https://invita-me.vercel.app/helena-quince'
+  }}
+  ,
+  favicon='/helena/icon.webp'
+>
   <section
     class='relative flex h-screen flex-col items-center justify-center bg-[#f7f1df] bg-cover sm:bg-contain'
     id='hero'

@@ -1,21 +1,34 @@
 ---
 import '@fontsource-variable/montserrat'
 import Music from '../components/Music.astro'
+import { OK } from 'astro:schema'
 
-const { music = true } = Astro.props
+interface Props {
+  title: string
+  music?: boolean
+  favicon?: string
+  og?: {
+    title?: string
+    image?: string
+    type?: string
+    url?: string
+  }
+}
+
+const { music = true, title, og, favicon } = Astro.props
 ---
 
 <!doctype html>
 <html lang='es'>
   <head>
     <meta charset='UTF-8' />
-    <title>Mía - Quince Años</title>
+    <title>{title}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    <link rel='icon' href='/mariposa-blanca.webp' type='image/webp' />
-    <meta property='og:title' content='Mía - Quince Años' />
-    <meta property='og:image' content='https://invita-me.vercel.app/og.webp' />
-    <meta property='og:type' content='website' />
-    <meta property='og:url' content='https://invita-me.vercel.app/mia-quince' />
+    <link rel='icon' href={favicon} type='image/webp' />
+    <meta property='og:title' content={og?.title} />
+    <meta property='og:image' content={og?.image} />
+    <meta property='og:type' content={og?.type} />
+    <meta property='og:url' content={og?.url} />
   </head>
   <body class='select-none bg-tertiary *:px-4'>
     {music && <Music src='/music/music.mp3' />}
