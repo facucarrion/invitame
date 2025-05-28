@@ -4,12 +4,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#dcaf66'
+        primary: '#dcaf66',
+        helena: {
+          primary: '#604531',
+          font: '#e2c086',
+          background: '#f9f5f1'
+        }
       },
       fontFamily: {
         mallorga: ['Mallorga', 'sans-serif'],
         adelia: ['Adelia', 'sans-serif'],
-        sans: ['Montserrat Variable', 'sans-serif']
+        sans: ['Montserrat Variable', 'sans-serif'],
+        audrey: ['Audrey', 'sans-serif'],
+        bacalisties: ['Bacalisties', 'sans-serif']
       }
     }
   },

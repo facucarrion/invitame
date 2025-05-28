@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/Footer.astro'
+import ArrowDown from '../components/icons/ArrowDown.astro'
+import MusicPlay from '../components/icons/MusicPlay.astro'
+import MusicPause from '../components/icons/MusicPause.astro'
+import Instagram from '../components/icons/Instagram.astro'
+---
+
+<Layout music={false}>
+  <section
+    class='relative flex h-screen flex-col items-center justify-center bg-[#f7f1df] bg-cover sm:bg-contain'
+    id='hero'
+  >
+    <ArrowDown
+      class='absolute bottom-12 size-16 stroke-primary lg:bottom-20'
+      id='arrow-icon'
+    />
+  </section>
+
+  <section
+    class='flex items-center justify-center gap-12 py-6 text-lg text-white bg-helena-font'
+  >
+    <img src='/helena/botones_izq.webp' class='h-8' alt='' />
+    <button
+      class='size-14 p-4 rounded-full bg-helena-primary text-white backdrop-blur-xl hover:opacity-80 transition-opacity'
+      id='music-button'
+    >
+      <MusicPlay class='h-full w-full stroke-white' id='music-play' />
+      <MusicPause class='h-full w-full stroke-white' id='music-pause' hidden />
+    </button>
+    <img src='/helena/botones_der.webp' class='h-8' alt='' />
+
+    <audio controls id='music' class='hidden'>
+      <source src='/music/music.mp3' type='audio/mpeg' />
+
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <section class='flex flex-col relative items-center gap-8 py-16 font-audrey'>
+    <p class='text-3xl text-center text-pretty'>
+      La vida es un camino lleno de luces...<br />
+      y mis 15 será una de las más brillantes <br />
+      ¡Vení a festejarlo conmigo!
+    </p>
+
+    <img
+      src='/helena/decorations/manchas derecha.webp'
+      alt=''
+      class='absolute bottom-0 right-0 -z-10 h-4/5'
+    />
+
+    <img
+      src='/helena/decorations/hojas.webp'
+      alt=''
+      class='absolute bottom-0 right-0 -z-10 h-full'
+    />
+
+    <img
+      src='/helena/decorations/manchas izquierda.webp'
+      alt=''
+      class='absolute top-0 left-0 -z-10 h-full'
+    />
+
+    <img
+      src='/helena/decorations/flores.webp'
+      alt=''
+      class='absolute bottom-0 left-0 -z-10 h-1/2'
+    />
+  </section>
+
+  <section
+    class='flex items-center justify-center py-6 text-lg text-white bg-helena-font'
+  >
+    <div class='flex w-[500px] flex-col items-center p-4'>
+      <p>Faltan:</p>
+      <div
+        class='text-xl font-semibold tracking-wide sm:text-2xl'
+        id='countdown'
+      >
+      </div>
+    </div>
+  </section>
+
+  <section
+    class='flex flex-col relative items-center gap-8 pt-16 pb-40 font-audrey bg-helena-background text-helena-primary [&>*]:z-20 [&>img]:z-10'
+  >
+    <h3 class='w-full max-w-[650px] text-center text-3xl mb-6'>
+      Cada minuto cuenta en esta noche especial. Te esperamos puntual para vivir
+      esta fiesta de principio a fin.
+    </h3>
+
+    <div class='flex flex-col items-center gap-2 mb-6'>
+      <p class='text-3xl md:text-4xl font-regular'>SÁBADO 05 DE JULIO</p>
+      <strong class='text-3xl md:text-4xl font-normal'>21:30 hs.</strong>
+      <p class='text-3xl md:text-4xl font-regular'>SALÓN 1929</p>
+      <p class='text-3xl font-regular'>(Uruguay 447. Río Tercero)</p>
+    </div>
+
+    <img src='/icons/map.gif' class='h-24 md:h-32' />
+
+    <a
+      href='https://maps.app.goo.gl/k6mukjb5fBuu9vNdA'
+      class='rounded-lg bg-helena-font font-sans px-8 py-2 text-xl text-helena-primary transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+    >
+      CÓMO LLEGAR
+    </a>
+
+    <img
+      src='/helena/decorations/flores grandes.webp'
+      alt=''
+      class='absolute bottom-0 left-1/2 right-0 w-full -translate-x-1/2 max-w-[800px]'
+    />
+  </section>
+
+  <hr id='divisor' />
+
+  <section
+    class='relative py-12 pb-40 flex flex-col items-center justify-center bg-helena-background'
+  >
+    <div
+      class='grid w-full gap-6 max-w-[900px] grid-cols-2 xl:grid-cols-3
+    md:auto-rows-[minmax(200px,_auto)]'
+    >
+      <img src='/helena/gallery/1.webp' class='w-full h-full object-cover' />
+      <img src='/helena/gallery/2.webp' class='w-full h-full object-cover' />
+      <img src='/helena/gallery/3.webp' class='w-full h-full object-cover' />
+      <img src='/helena/gallery/4.webp' class='w-full h-full object-cover' />
+      <img src='/helena/gallery/5.webp' class='w-full h-full object-cover' />
+      <img src='/helena/gallery/6.webp' class='w-full h-full object-cover' />
+    </div>
+
+    <img src='/icons/festival.gif' class='h-28 mt-16' />
+
+    <h3 class='w-full text-center text-7xl mt-8 mb-12 font-bacalisties'>
+      Música
+    </h3>
+
+    <p class='text-3xl text-center text-pretty font-audrey mb-8'>
+      La fiesta se arma con vos... <br />
+      ¡y con tu música favorita! <br />
+      Decime qué tema no puede <br />
+      faltar para que saltemos juntos
+    </p>
+
+    <a
+      href='https://wa.me/+5493571356409?text=Hola%20M%C3%ADa!%20La%20noche%20de%20tu%20fiesta,%20me%20encantar%C3%ADa%20escuchar%20la%20canci%C3%B3n...%0A'
+      class='flex items-center gap-2 rounded-lg bg-helena-font text-helena-primary px-8 py-2 text-lg transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl z-20'
+      target='_blank'
+    >
+      MI TEMA FAVORITO
+    </a>
+
+    <img
+      src='/helena/decorations/flores grandes.webp'
+      alt=''
+      class='absolute bottom-0 left-1/2 right-0 w-full -translate-x-1/2 max-w-[800px]'
+    />
+  </section>
+
+  <hr id='divisor' />
+
+  <section
+    class='flex flex-col relative items-center py-24 bg-helena-background [&>img]:z-10 [&>*]:z-20'
+  >
+    <p class='mb-12 text-3xl text-center text-pretty font-audrey'>
+      Como no quiero perder ningún detalle <br />
+      de esta fiesta, te invito a compartir <br />
+      tus fotos y me ayudes a inmortalizar <br />
+      estos momentos <br />
+      ¡Etiquetame!
+    </p>
+
+    <span class='p-1 mb-4 bg-helena-font rounded-xl'>
+      <Instagram />
+    </span>
+
+    <a
+      class='px-8 py-2 bg-helena-font rounded-lg transition-opacity hover:opacity-80'
+      href='https://instagram.com/hhelenabustos_'
+      target='_blank'
+    >
+      @hhelenabustos_
+    </a>
+
+    <img
+      src='/helena/decorations/manchas derecha.webp'
+      alt=''
+      class='absolute bottom-0 right-0 -z-10 h-1/4'
+    />
+
+    <img
+      src='/helena/decorations/hojas.webp'
+      alt=''
+      class='absolute bottom-0 right-0 -z-10 h-1/2'
+    />
+
+    <img
+      src='/helena/decorations/manchas izquierda.webp'
+      alt=''
+      class='absolute top-0 left-0 -z-10 h-1/2'
+    />
+
+    <img
+      src='/helena/decorations/flores.webp'
+      alt=''
+      class='absolute bottom-0 left-0 -z-10 h-1/4'
+    />
+  </section>
+
+  <hr id='divisor' />
+
+  <section
+    class='relative flex flex-col items-center gap-8 pt-24 pb-40 bg-helena-background'
+  >
+    <h2
+      class='text-center text-7xl font-bacalisties tracking-wider text-helena-primary'
+    >
+      Asistencia
+    </h2>
+
+    <p
+      class='text-center text-4xl text-helena-primary font-audrey text-pretty my-8'
+    >
+      Confirmá tu asistencia antes <br />
+      del
+      <strong class='font-semibold'>10/03</strong> haciendo click aquí.
+    </p>
+
+    <span class='flex gap-2 md:gap-4'>
+      <a
+        href='https://docs.google.com/forms/d/e/1FAIpQLScs3H2hPeas0hIvXFDA3UDadBJ-P4ZcddzoAyCYrgvNXdh9Rw/viewform?usp=header'
+        class='flex items-center gap-2 rounded-lg bg-helena-font px-8 py-2 text-lg text-helena-primary transition-opacity ease-in-out hover:opacity-85 md:px-10 md:text-xl'
+        target='_blank'
+      >
+        CONFIRMAR
+      </a>
+    </span>
+
+    <p
+      class='text-center text-4xl text-helena-primary font-audrey text-pretty my-8'
+    >
+      Tu presencia va a hacer que la noche sea aún más linda!!
+    </p>
+
+    <h2
+      class='text-center text-6xl ml-24 font-bacalisties tracking-wider text-helena-primary'
+    >
+      Te espero!
+    </h2>
+
+    <img
+      src='/helena/decorations/flores grandes.webp'
+      alt=''
+      class='absolute bottom-0 left-1/2 right-0 w-full -translate-x-1/2 max-w-[800px]'
+    />
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  #arrow-icon {
+    animation: bounce 2s infinite;
+  }
+
+  #left {
+    transform: scaleX(-1);
+  }
+
+  #hero {
+    background-image: url('/helena/background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #divisor {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ab7c5e, #f4e8bb, #ab7c5e);
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  const countdown = document.getElementById('countdown') as HTMLDivElement
+  const goalDate = new Date('2025-07-05T21:30:00').getTime()
+
+  function updateCountdown() {
+    const actualDate = new Date().getTime()
+    const difference = goalDate - actualDate
+
+    const data = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      ),
+      minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds: Math.floor((difference % (1000 * 60)) / 1000)
+    }
+
+    if (difference >= 0) {
+      const dateText = `${data.days} Días, ${data.hours}hs, ${data.minutes}m, ${data.seconds}s`
+      countdown.innerHTML = dateText
+      requestAnimationFrame(updateCountdown)
+    } else {
+      countdown.innerHTML = '¡Es el día!'
+    }
+  }
+
+  updateCountdown()
+</script>
+
+<script>
+  const button = document.getElementById('music-button') as HTMLButtonElement
+  const music = document.getElementById('music') as HTMLAudioElement
+  const musicPlay = document.getElementById('music-play') as HTMLElement
+  const musicPause = document.getElementById('music-pause') as HTMLElement
+
+  let isMusicPlaying = false
+
+  button.addEventListener('click', () => {
+    isMusicPlaying = !isMusicPlaying
+    music.volume = 0.5
+
+    if (isMusicPlaying) {
+      musicPlay.style.display = 'none'
+      musicPause.style.display = 'block'
+
+      music.play()
+    } else {
+      musicPlay.style.display = 'block'
+      musicPause.style.display = 'none'
+      music.pause()
+    }
+  })
+</script>

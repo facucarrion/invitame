@@ -1,6 +1,8 @@
 ---
 import '@fontsource-variable/montserrat'
 import Music from '../components/Music.astro'
+
+const { music = true } = Astro.props
 ---
 
 <!doctype html>
@@ -16,7 +18,7 @@ import Music from '../components/Music.astro'
     <meta property='og:url' content='https://invita-me.vercel.app/mia-quince' />
   </head>
   <body class='select-none bg-tertiary *:px-4'>
-    <Music src='/music/music.mp3' />
+    {music && <Music src='/music/music.mp3' />}
     <slot />
   </body>
 </html>
@@ -35,6 +37,16 @@ import Music from '../components/Music.astro'
   @font-face {
     font-family: 'Adelia';
     src: url('/fonts/adelia.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Audrey';
+    src: url('/fonts/Audrey-Normal.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Bacalisties';
+    src: url('/fonts/Bacalisties.ttf') format('truetype');
   }
 
   :root {
