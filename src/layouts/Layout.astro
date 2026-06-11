@@ -1,11 +1,11 @@
 ---
 import '@fontsource-variable/montserrat'
 import Music from '../components/Music.astro'
-import { OK } from 'astro:schema'
 
 interface Props {
   title: string
   music?: boolean
+  musicSrc: string
   favicon?: string
   og?: {
     title?: string
@@ -15,7 +15,7 @@ interface Props {
   }
 }
 
-const { music = true, title, og, favicon } = Astro.props
+const { music = true, title, og, favicon, musicSrc } = Astro.props
 ---
 
 <!doctype html>
@@ -31,7 +31,7 @@ const { music = true, title, og, favicon } = Astro.props
     <meta property='og:url' content={og?.url} />
   </head>
   <body class='select-none bg-tertiary *:px-4'>
-    {music && <Music src='/music/music.mp3' />}
+    {music && <Music src={musicSrc} />}
     <slot />
   </body>
 </html>
